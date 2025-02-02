@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "fea4bcfd-1e76-4907-a3cb-9469e945fb7b",
+		"name": "CusTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3587867"
+	},
+	"item": [
+		{
+			"name": "All Products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/status/Completed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"status",
+						"Completed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customer\": {\r\n    \"customerId\": 1,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"address\": {\r\n      \"street\": \"123 Main St\",\r\n      \"city\": \"Anytown\",\r\n      \"zipCode\": \"12345\"\r\n    }\r\n  },\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"title\": \"Fjallraven - Foldsack No. 1 Backpack\",\r\n      \"price\": 109.95,\r\n      \"description\": \"A perfect backpack for everyday use.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 3.9,\r\n        \"count\": 120\r\n      }\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customer\": {\r\n    \"customerId\": 1,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"address\": {\r\n      \"street\": \"123 Main St\",\r\n      \"city\": \"Anytown\",\r\n      \"zipCode\": \"12345\"\r\n    }\r\n  },\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"title\": \"Fjallraven - Foldsack No. 1 Backpack\",\r\n      \"price\": 109.95,\r\n      \"description\": \"A perfect backpack for everyday use.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 3.9,\r\n        \"count\": 120\r\n      }\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product{id}",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments Multiples",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customer\": {\r\n    \"customerId\": 1,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"address\": {\r\n      \"street\": \"123 Main St\",\r\n      \"city\": \"Anytown\",\r\n      \"zipCode\": \"12345\"\r\n    }\r\n  },\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"title\": \"Fjallraven - Foldsack No. 1 Backpack\",\r\n      \"price\": 109.95,\r\n      \"description\": \"A perfect backpack for everyday use.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 3.9,\r\n        \"count\": 120\r\n      }\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"title\": \"Mens Casual Premium Slim Fit T-Shirt\",\r\n      \"price\": 22.3,\r\n      \"description\": \"Slim-fitting style, contrast raglan long sleeve.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 4.1,\r\n        \"count\": 259\r\n      }\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"title\": \"Mens Cotton Jacket\",\r\n      \"price\": 55.99,\r\n      \"description\": \"Great outerwear jackets for Spring/Autumn/Winter.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 4.7,\r\n        \"count\": 500\r\n      }\r\n    }\r\n  ],\r\n  \"total\": 188.24,\r\n  \"paymentMethod\": \"Credit Card\",\r\n  \"status\": \"Pending\",\r\n  \"paymentDate\": \"2025-01-31T12:34:56\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Multiples",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customer\": {\r\n    \"customerId\": 1,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"address\": {\r\n      \"street\": \"123 Main St\",\r\n      \"city\": \"Anytown\",\r\n      \"zipCode\": \"12345\"\r\n    }\r\n  },\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"title\": \"Fjallraven - Foldsack No. 1 Backpack\",\r\n      \"price\": 109.95,\r\n      \"description\": \"A perfect backpack for everyday use.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 3.9,\r\n        \"count\": 120\r\n      }\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"title\": \"Mens Casual Premium Slim Fit T-Shirt\",\r\n      \"price\": 22.3,\r\n      \"description\": \"Slim-fitting style, contrast raglan long sleeve.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 4.1,\r\n        \"count\": 259\r\n      }\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"title\": \"Mens Cotton Jacket\",\r\n      \"price\": 55.99,\r\n      \"description\": \"Great outerwear jackets for Spring/Autumn/Winter.\",\r\n      \"category\": \"men's clothing\",\r\n      \"image\": \"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg\",\r\n      \"rating\": {\r\n        \"rate\": 4.7,\r\n        \"count\": 500\r\n      }\r\n    }\r\n  ],\r\n  \"total\": 188.24,\r\n  \"paymentMethod\": \"Credit Card\",\r\n  \"status\": \"Pending\",\r\n  \"paymentDate\": \"2025-01-31T12:34:56\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Status Pending",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/status/Pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"status",
+						"Pending"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
